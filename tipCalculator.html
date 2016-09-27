@@ -24,27 +24,50 @@
                     <br />
                     <p id="topInfo">Tip Calculator</p>
                     <hr />
-                    <p id="bodyOfCard"> How much was your bill?</p><br />
-                    <p>$<input type="text" id="billTotal" placeholder=""></p>
+                    <p id="bodyOfCard"> How much was your bill?</p>
+                    <form id="form">
+                        <p>$<input type="number" maxlength="6" min="0.01" step="0.01" max="999" id="billTotal" placeholder=""></p>
 
-                   
-                   
-                            <hr />
-                            <p id ="bodyOfCard">How many people are splitting this bill?<p>
-                                  <p><input type="text" id="peopleSplit" placeholder="">people</p>
-
-                                    <button type="submit" class="btn btn-primary" value="collectData">Calculate</button><br /><br /><br/>
+                        <p id="bodyOfCard">How was your service?</p>
+                        <div class="dropdown" id="optionDrop">
+                            <select>
+                            <option value = "null">-- Choose an option --</option>
+                            
+                            <option value = "0.30" type = "number" >30% - Outstanding</option>
+                           
+                            <option value = "0.20" type = "number" >20% - Good</option>
+                         
+                            <option value = "0.15" type = "number" >15% - It was okay</option>
+                           
+                            <option value = "0.10" type = "number" >10% - Bad</option>
+                           
+                            <option value = "0.05" type = "number" > 5% - Terrible</option>
+                            </select>
 
 
                         </div>
-                  
+                        <hr />
+                        <p id="bodyOfCard">How many people are splitting this bill?
+                            <p>
+                                <p><input type="number" id="peopleSplit" value="1" max = "10" min = "1" placeholder=""> people</p>
+
+                                <button type="submit" class="btn btn-primary" id="collectData">Calculate</button><br />
+                                <center>
+                                    <div id="bodyOfCard" class="results">
+                                        <div>
+                                </center>
+                                <button id = "clear" type="reset" class="btn btn-warning" value="clearFields">Clear fields</button><br /><br
+                                />
+                    </form>
+                    </div>
+
                     <div class="col-md-4 none">
                         <br /></div>
             </center>
 
 
             </div>
-        </div>
+            </div>
 
 
 </body>
